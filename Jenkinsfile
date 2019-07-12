@@ -17,7 +17,7 @@ node{
    stage('SonarQube analysis') {
     def path = tool name: 'gradle-4.7', type: 'gradle'
     withSonarQubeEnv('sonar-server') {
-        sh "${path}/bin/gradle --info -Dsonar.host.url=http://localhost:9000 sonarqube"
+        sh "${path}/bin/gradle --info -Dsonar.host.url=http://localhost:9000 sonarqube -Dsonar.projectName=Altoro"
     }
    } 	
  
