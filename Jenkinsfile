@@ -24,8 +24,8 @@ node{
    stage ("Appscan"){
      //  appscan application: '84963f4f-0cf4-4262-9afe-3bd7c0ec3942', credentials: 'Credential for ASOC', failBuild: true, failureConditions: [failure_condition(failureType: 'high', threshold: 20)], name: '84963f4f-0cf4-4262-9afe-3bd7c0ec39421562', scanner: static_analyzer(hasOptions: false, target: 'D:/Installables/Jenkins/workspace/Velocity/AltoroJ/build/libs/'), type: 'Static Analyzer'
   	build job: 'Velocity/asoc123', wait: false, parameters: [
-  	string(name: 'COMMITID', value: GIT_COMMIT),
-	string(name: 'parentBuildNumber', value: BUILD_NUMBER)
+  	string(name: 'COMMITID', value: ${GIT_COMMIT}),
+	string(name: 'parentBuildNumber', value: ${BUILD_NUMBER})
 		
 	]
    }
