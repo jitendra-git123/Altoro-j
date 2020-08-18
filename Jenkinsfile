@@ -19,6 +19,7 @@ node{
    // withSonarQubeEnv('sonar-server') {
      //   sh "${path}/bin/gradle --info -Dsonar.host.url=http://localhost:9000 sonarqube"
    // }
+	   sh  "mvn sonar:sonar -Dsonar.projectName=AltoroJ"
    } 	
  
    stage ("Appscan"){
